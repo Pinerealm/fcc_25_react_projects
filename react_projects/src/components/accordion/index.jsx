@@ -30,7 +30,7 @@ export default function Accordion() {
       <div className="accordion">
         {data && data.length > 0 ? (
           data.map((dataItem) => (
-            <div className="item">
+            <div className="item" key={dataItem.id}>
               <div
                 onClick={
                   multiSelect
