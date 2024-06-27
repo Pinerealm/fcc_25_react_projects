@@ -38,6 +38,11 @@ export default function Accordion() {
                     : () => handleSingleSelection(dataItem.id)
                 }
                 className="title"
+                aria-expanded={
+                  multiSelect
+                    ? selectedItems.includes(dataItem.id)
+                    : selected === dataItem.id
+                }
               >
                 <h3>{dataItem.question}</h3>
                 <span>+</span>
